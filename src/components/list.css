@@ -1,0 +1,54 @@
+
+
+.listName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    background: rgba(0,0,0,.03);
+}
+.scrollableContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.listContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px;
+}
+.artistName{
+  font-size: 40px;
+
+}
+.searchBox{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3px;
+}
+
+.trophyicon{
+  font-size: 25px !important;
+  margin-left: 30px !important;
+  margin-top: 8px !important;
+  color: goldenrod !important;
+  cursor: pointer;
+}
+.voteContainer{
+ margin: 5px !important;
+}
+.changePageIconReverse{
+  display: inline;
+  position: relative;
+  top: 85%;
+  left: 80%;
+  z-index: 30;
+  font-size: 50px;
+  position: fixed;
+}

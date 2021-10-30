@@ -1,0 +1,106 @@
+.hide {
+    display: none !important;
+}
+.addCommentButton{
+  margin-top: 7px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.addComment{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.rank{
+  font-size: 50px;
+  color: rgba(0,0,0,.8);
+}
+
+.itemList{
+  background:lavender;
+  border-radius: 12px;
+  position: relative;
+}
+
+.crown{
+  font-size: 50px;
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  top:-30px;
+  left: -15px;
+}
+.commentForm{
+  margin-top: 10px;
+}
+.modalContainer{
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  position: fixed;
+  top:30%;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  }
+.commentModal{
+  max-width: 100%;
+  width: 100%;
+}
+.modalHeader{
+  width: 100%;
+}
+.headerItems{
+width: 100%;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+.closeModal{
+  cursor: pointer !important;
+}
+.textArea{
+  max-height: 50px !important;
+}
+.commentModalContentContainer{
+  display: flex;
+  justify-content: center;
+}
+.commentModalContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 100vh;
+  margin-left: 20px;
+}
+.itemName{
+  width: 30vh;
+}
+.item{
+  background: rgba(0,0,0,0);
+  cursor:context-menu !important;
+}
+.heartIcon{
+  font-size: 20px !important;
+  cursor: pointer !important;
+ display:  inline !important;
+
+}
+.heartIcon:hover{
+  color: rosybrown !important;
+}
+.votesContainer{
+display: flex;
+justify-content: flex-end;
+}
+
+.votes{
+  font-size: 20px;
+}

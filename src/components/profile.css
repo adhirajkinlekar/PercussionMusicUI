@@ -1,0 +1,39 @@
+.artistProfile{
+    width:80vh !important;
+    max-width: 100% ;
+    padding-top: 5px;
+    color: grey ;
+    white-space :pre-wrap;
+  }
+  .headerName{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    text-decoration-line: underline;
+  }
+  .musicIcon{
+    padding-left: 10px;
+    color:rosybrown;
+  }
+  .artistBio{
+    padding: 6px;
+    overflow-x: hidden;
+  }
+  
+  .dataTableContent{
+    height:10vh !important;
+    background: goldenrod !important;
+    color:greenyellow;
+  }
+  .artistName{
+    color:rgb(79, 79, 79);
+    /* background:mistyrose; */
+    background: aliceblue;
+  }
+  
+.changePageIcon{
+  display: inline;
+  position: relative !important;
+  font-size: 50px!important;
+  top: 30%;
+  left: 80%;
+  cursor: pointer;
+}

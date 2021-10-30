@@ -1,0 +1,15 @@
+.spinnerContainer{
+position: absolute !important;
+ top: 0px !important; 
+  left: 0px !important;
+  width: 100% !important; 
+  height: 100% !important;
+  opacity: 0.8 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 10;
+  background: whitesmoke;
+  opacity: 0.4;
+  position: fixed  !important;
+}

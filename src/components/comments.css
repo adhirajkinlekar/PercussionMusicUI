@@ -1,0 +1,39 @@
+.penIcon{
+    color: black;
+    cursor: pointer;
+}
+.trashIcon{
+    color: black;
+    cursor: pointer;
+}
+.author{
+  color: cornflowerblue!important;
+}
+.seeMore{
+  margin-top: 10px;
+  background: white;
+}
+.seeMoreAnchor{
+  color: black!important;
+  cursor: pointer;
+}
+.textArea{
+  max-height: 50px !important;
+  width: 100%;
+}
+.commentSection{
+}
+.commentContainer{  
+  background: rgb(248, 247, 247);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 10px;
+}
+.profilePic{
+  padding-left: 5px;
+}
+.customComment{
+  padding: 0px !important;
+}

@@ -1,38 +1,52 @@
-.App {
+
+
+.appContent{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+   /* background:ghostwhite;  */
+}
+
+.navHeader{
+  background:cadetblue !important;
+}
+.navIcons{
+  margin-left: auto;
+  padding-right: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.signIn{
+  padding-right: 10px;
+  color:black;
+}
+
+.pageNotFoundContainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+ 
+}
+.pageNotFound{
+  font-size:50px;
+  margin: 0 auto;
+}
+.pageNotFoundDesc{
+  color: grey;
+  font-size:30px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.register{
+  color:black;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.powerOffIcon{
+  padding-left: 20px;
+  font-size: 20px !important;
+  cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.settingsIcon{
+  color: black;
+  font-size: 20px !important;
+  cursor: pointer;
 }

@@ -3,10 +3,29 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'semantic-ui-css/semantic.min.css'
+import '../node_modules/font-awesome/css/font-awesome.min.css'; 
+import {BrowserRouter} from 'react-router-dom';
+import {AuthContextProvider} from './store/auth-context'
+import axios from 'axios';
+
+// axios.defaults.baseURL = http://localhost:3001
+axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
+// axios.interceptors.request.use((req)=>{
+//   return req;
+// })
+
+// axios.interceptors.response.use((res)=>{
+//   return res;
+// })
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AuthContextProvider>
+    <BrowserRouter>
+    <App/>
+    </BrowserRouter>
+    </AuthContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
@@ -15,3 +34,6 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+// npm install react-router-dom

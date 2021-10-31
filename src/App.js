@@ -24,7 +24,6 @@ const App = ()=> {
   const [showProfile,setShowProfile] = useState(true);
 
   const resizeScreen =() => {
-    console.log(screenwidth)
     setScreenwidth(window.screen.availWidth)
      }
 

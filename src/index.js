@@ -10,17 +10,10 @@ import {AuthContextProvider} from './store/auth-context'
 import axios from 'axios';
 
 axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
-// axios.interceptors.request.use((req)=>{
-//   return req;
-// })
 
-// axios.interceptors.response.use((res)=>{
-//   return res;
-// })
-
-
+console.log(process.env)
 if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-  console.log( process.env.NODE_ENV)
+
 console.log(true)
 axios.defaults.baseURL = 'http://localhost:3001'
 } else {

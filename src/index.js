@@ -8,13 +8,11 @@ import '../node_modules/font-awesome/css/font-awesome.min.css';
 import {BrowserRouter} from 'react-router-dom';
 import {AuthContextProvider} from './store/auth-context'
 import axios from 'axios';
-require('dotenv').config();
+
 axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
 
-console.log(process.env);
+console.log(process.env.prod);
 if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-
-console.log(true)
 axios.defaults.baseURL = 'http://localhost:3001'
 } else {
   axios.defaults.baseURL = 'https://percussionmusicapi.herokuapp.com';

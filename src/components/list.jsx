@@ -33,7 +33,7 @@ class List extends Component {
 
   fetchList = async (listId) => {
 
-    await axios.get(`http://localhost:3001/api/Lists/${this.props.match.params.id}`)
+    await axios.get(`${axios.defaults.baseURL}/api/Lists/${this.props.match.params.id}`)
       .then(response => response.data)
       .then(response => {
         let tempObj = {};
@@ -69,7 +69,7 @@ class List extends Component {
   }
   
   getVotes = async () => {
-    await axios.get(`http://localhost:3001/api/Lists/${this.props.match.params.id}/${this.context.user._id}/votes`).then((response) => {
+    await axios.get(`${axios.defaults.baseURL}/api/Lists/${this.props.match.params.id}/${this.context.user._id}/votes`).then((response) => {
 
       this.setState({ votes: response.data.data })
     })
@@ -84,7 +84,7 @@ class List extends Component {
   }
 
   submitVote = async (itemId, userId) => {
-    await axios.post(`http://localhost:3001/api/Lists/items/${itemId}/vote`, {
+    await axios.post(`${axios.defaults.baseURL}/api/Lists/items/${itemId}/vote`, {
       itemId: itemId,
       userId: userId,
       listId: this.props.match.params.id

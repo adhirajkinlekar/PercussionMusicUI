@@ -32,7 +32,7 @@ const Comment = (props) => {
     const editComment = ($event, commentId) => {
         $event.preventDefault();
         let comment = $event.target.elements.comment.value;
-        axios.patch(`http://localhost:3001/api/Lists/items/${props.itemId}/comments/${commentId}`, {
+        axios.patch(`${axios.defaults.baseURL}/api/Lists/items/${props.itemId}/comments/${commentId}`, {
             text: comment
         })
             .then(() => {
@@ -45,7 +45,7 @@ const Comment = (props) => {
     }
     const deleteComment = ($event, commentId) => {
         $event.preventDefault();
-        axios.delete(`http://localhost:3001/api/Lists/items/${props.itemId}/comments/${commentId}`)
+        axios.delete(`${axios.defaults.baseURL}/api/Lists/items/${props.itemId}/comments/${commentId}`)
             .then(() => {
                 props.fetchList();
             })

@@ -50,7 +50,7 @@ const AddList = () => {
                     //    var a = songNames.filter((song,i)=>{
                     //         return i === 0|| i === 3|| i === 2
                     //     })
-                    axios.post(`http://localhost:3001/api/lists`, {
+                    axios.post(`${axios.defaults.baseURL}/api/lists`, {
                         listInfo: {
                             name: artistName,
                             artistId: artistId,

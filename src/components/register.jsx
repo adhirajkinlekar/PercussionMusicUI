@@ -38,7 +38,7 @@ class Register extends Component {
 
     onSubmitRegister = (e) => {
         e.preventDefault();
-        axios.post(`http://localhost:3001/api/users/signup`, {
+        axios.post(`${axios.defaults.baseURL}/api/users/signup`, {
             name: this.state.name,
             email: this.state.email,
             password: this.state.password,

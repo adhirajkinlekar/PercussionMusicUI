@@ -9,7 +9,6 @@ import {BrowserRouter} from 'react-router-dom';
 import {AuthContextProvider} from './store/auth-context'
 import axios from 'axios';
 
-// axios.defaults.baseURL = http://localhost:3001
 axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
 // axios.interceptors.request.use((req)=>{
 //   return req;
@@ -18,6 +17,14 @@ axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getIte
 // axios.interceptors.response.use((res)=>{
 //   return res;
 // })
+
+
+if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+
+axios.defaults.baseURL = 'http://localhost:3001'
+} else {
+  axios.defaults.baseURL = 'https://percussionmusicapi.herokuapp.com';
+}
 
 ReactDOM.render(
   <React.StrictMode>

@@ -18,7 +18,7 @@ class SelectArtist extends Component {
     }
 
     fetchListsInfo = () => {
-        axios.get('http://localhost:3001/api/Lists/listsInfo')
+        axios.get(`${axios.defaults.baseURL}/api/Lists/listsInfo`)
             .then(response => response.data.data)
             .then(data => {
                 const sortedList = data?.sort(this.compare);

@@ -68,7 +68,7 @@ const Item = (props) => {
     const submitComment = ($event) => {
         $event.preventDefault();
         let comment = $event.target.elements.comment.value;
-        axios.post(`http://localhost:3001/api/Lists/items/${itemId}/comments`, {
+        axios.post(`${axios.defaults.baseURL}/api/Lists/items/${itemId}/comments`, {
             text: comment,
             likes: 1,
             createdBy: `${authctx.user._id}`

@@ -17,7 +17,7 @@ class Profile extends Component {
     }
 
     fetchDiscogsId = () => {
-        axios.get(`http://localhost:3001/api/Lists/${this.props.match.params.id}/discogsId`)
+        axios.get(`${axios.defaults.baseURL}/api/Lists/${this.props.match.params.id}/discogsId`)
             .then(response => response.data)
             .then(response => {
                 this.fetchArtistInfo(response.data.artistId)

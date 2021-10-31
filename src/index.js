@@ -20,7 +20,7 @@ axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getIte
 
 
 if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-
+console.log(true)
 axios.defaults.baseURL = 'http://localhost:3001'
 } else {
   axios.defaults.baseURL = 'https://percussionmusicapi.herokuapp.com';

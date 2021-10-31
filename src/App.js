@@ -31,7 +31,6 @@ const App = ()=> {
        window.addEventListener("resize", resizeScreen);
        // eslint-disable-next-line react-hooks/exhaustive-deps
      },[window.screen.availWidth])
-
   const logout = () => {
     authctx.logout();
     // if (this.props.history.location.pathname !== '/') {

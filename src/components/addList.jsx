@@ -47,9 +47,6 @@ const AddList = () => {
                 }
                 );
                 if (songNames.length > 0) {
-                    //    var a = songNames.filter((song,i)=>{
-                    //         return i === 0|| i === 3|| i === 2
-                    //     })
                     axios.post(`${axios.defaults.baseURL}/api/lists`, {
                         listInfo: {
                             name: artistName,

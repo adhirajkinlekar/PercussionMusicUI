@@ -50,7 +50,7 @@ class Profile extends Component {
     }
 
     render() {
-        // const a = console.log(JSON.stringify(this.state.artistInfo.image)) weird
+      /// console.log(this.state.artistInfo.image[0]) weird
 
         return (Object.keys(this.state.artistInfo).length === 0 && this.state.artistInfo.constructor === Object ? null :
             <div className="ui card artistProfile">

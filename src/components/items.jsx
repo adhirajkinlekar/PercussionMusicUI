@@ -14,8 +14,8 @@ function reducer(state, action) {
         default:
             return state
     }
-
 }
+
 const Item = (props) => {
     const authctx = useContext(AuthContext);
     const textArea = useRef();
@@ -28,6 +28,9 @@ const Item = (props) => {
     useEffect(() => {
         dispatchItem(showModal, state.modalItem?._id);
         // eslint-disable-next-line react-hooks/exhaustive-deps
+        return ()=>{
+            console.log('this will run when component is about to be unmounteds')
+        }
     }, [props.items])
 
     const onAddComment = (id) => {
@@ -82,6 +85,7 @@ const Item = (props) => {
             .catch(err => {
             })
     }
+
     const items = props.items?.map((item, index) =>
         <div key={item._id}>
             <div className="ui middle aligned selection list itemList" style={{ backgroundColor: item.order === 1 ? 'rgb(250, 232, 186)' : '' }}>

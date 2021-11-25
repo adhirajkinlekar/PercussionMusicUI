@@ -22,18 +22,20 @@ class Register extends Component {
 
     }
 
-    onInputChange = (event, property) => {
-        switch (property) {
-            case 'name':
-                return this.setState({ name: event.target.value })
-            case 'email':
-                return this.setState({ email: event.target.value })
-            case 'password':
-                return this.setState({ password: event.target.value })
-            case 'passwordConfirm':
-                return this.setState({ passwordConfirm: event.target.value })
-            default: return
-        }
+    onInputChange = (event) => {
+        const {name,value} = event.target;
+        // switch (property) {
+        //     case 'name':
+        //         return this.setState({ name: event.target.value })
+        //     case 'email':
+        //         return this.setState({ email: event.target.value })
+        //     case 'password':
+        //         return this.setState({ password: event.target.value })
+        //     case 'passwordConfirm':
+        //         return this.setState({ passwordConfirm: event.target.value })
+        //     default: return
+        // }
+        this.setState({ [name]: value })
     }
 
     onSubmitRegister = (e) => {
@@ -71,32 +73,32 @@ class Register extends Component {
                                 Name
                             </p>
                             <input type="text"
-                                name="email-address"
-                                id="email-address"
-                                onChange={(e) => this.onInputChange(e, 'name')} placeholder="Name" />
+                                name="name"
+                                id="name"
+                                onChange={this.onInputChange} placeholder="Name" />
                         </div>
                         <div className="field">
                             <p>
                                 Email
                             </p>
                             <input type="email"
-                                name="email-address"
-                                id="email-address"
-                                onChange={(e) => this.onInputChange(e, 'email')} placeholder="Email" />
+                                name="email"
+                                id="email"
+                                onChange={this.onInputChange} placeholder="Email" />
                         </div>
                         <div className="field">
                             <p>Password</p>
                             <input type="password"
                                 name="password"
                                 id="password"
-                                onChange={(e) => this.onInputChange(e, 'password')} placeholder="password" />
+                                onChange={this.onInputChange} placeholder="password" />
                         </div>
                         <div className="field">
                             <p>Confirm Password</p>
                             <input type="password"
-                                name="passwordChange"
-                                id="passwordChange"
-                                onChange={(e) => this.onInputChange(e, 'passwordConfirm')} placeholder="confirm password" />
+                                name="passwordConfirm"
+                                id="passwordConfirm"
+                                onChange={this.onInputChange} placeholder="confirm password" />
                             {passwordConfirm.length > 0 && passwordConfirm !== password ? <div className="ui negative message">
                                 <div className="header">
                                     Passwords do not match

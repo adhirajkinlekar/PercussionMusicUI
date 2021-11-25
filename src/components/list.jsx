@@ -31,9 +31,9 @@ class List extends Component {
     this.fetchList();
   }
 
-  fetchList = async (listId) => {
+  fetchList = (listId) => {
 
-    await axios.get(`${axios.defaults.baseURL}/api/Lists/${this.props.match.params.id}`)
+   axios.get(`${axios.defaults.baseURL}/api/Lists/${this.props.match.params.id}`)
       .then(response => response.data)
       .then(response => {
         let tempObj = {};
@@ -164,6 +164,7 @@ class List extends Component {
   }
 
 }
+
 
 export default withRouter(List);
 

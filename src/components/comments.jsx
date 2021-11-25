@@ -115,7 +115,6 @@ const Comment = (props) => {
     const comments = slicedArray?.map((comment, index) =>
 
         <div className="ui segment comments commentContainer" key={comment._id}>
-
             <div className="comment customComment">
                 <div className="avatar profilePic" >
                     <img alt="profilePic" src={comment.createdBy?.photo} />

@@ -12,6 +12,7 @@ class SelectArtist extends Component {
             listsInfo: [],
             searchTerm: ''
         }
+        //this.randomProperty = React.createRef(); You can add this variable in jsx to get the details of the element.
     }
     componentDidMount() {
         this.fetchListsInfo();

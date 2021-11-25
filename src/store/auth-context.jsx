@@ -18,7 +18,7 @@ export const AuthContextProvider = (props) => {
   const loginHandler = (token,user) => {
     setToken(token);
     localStorage.setItem('token',token);
-    axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
+    //axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');
     localStorage.setItem('user',JSON.stringify(user))
     setUser(user)
   };
@@ -26,9 +26,9 @@ export const AuthContextProvider = (props) => {
   const logoutHandler = (user) => {
     setToken(null);
     localStorage.removeItem('token')
-    axios.defaults.headers.common['Authorization'] = '';
+    axios.defaults.headers.common['Authorization'] = null;
     localStorage.removeItem('user')
-    setUser(null)
+    setUser(null);
   };
 
   const contextValue = {

@@ -79,6 +79,7 @@ const App = () => {
           }
         </div>
         <ErrorBoundary>
+         <Fragment className="content">
           <Switch>
             <Route path="/admin" exact>
               <AddList />
@@ -107,6 +108,7 @@ const App = () => {
             </Route>
           </Switch>
           <HTTPInterceptor />
+          </Fragment>
         </ErrorBoundary>
       </div>
     </div>

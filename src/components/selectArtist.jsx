@@ -58,7 +58,7 @@ class SelectArtist extends Component {
                             <i className="search icon"></i>
                         </div>
                         <hr />
-                        <Scroll height="50vh">
+                        <Scroll height="65vh">
                             <div className="ui list">
                                 {
                                     filteredListInfo.map(list => {

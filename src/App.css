@@ -5,12 +5,13 @@
   justify-content: center;
   flex-wrap: wrap;
   justify-content: space-evenly;
-   /* background:ghostwhite;  */
 }
 
 .navHeader{
   background:cadetblue !important;
+  height: 5vh;
 }
+
 .navIcons{
   margin-left: auto;
   padding-right: 50px;

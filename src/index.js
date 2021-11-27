@@ -10,8 +10,8 @@ import {AuthContextProvider} from './store/auth-context'
 import axios from 'axios';
 
 //axios.defaults.headers.common['Authorization'] = localStorage.getItem('token');
-//axios.defaults.baseURL = 'https://percussionmusicapi.herokuapp.com';
-axios.defaults.baseURL = 'http://localhost:3001';
+axios.defaults.baseURL = 'https://percussionmusicapi.herokuapp.com';
+//axios.defaults.baseURL = 'http://localhost:3001';
 ReactDOM.render(
   <React.StrictMode>
     <AuthContextProvider>

@@ -4,7 +4,7 @@ use the following credentials to log into the application
 email : adhirajkinlekar123@gmail.com password : 12345678
 
 Features :
-- Sign Up
+- Sign In
 - Sign Out
 - Register
 - Add Arist profile and songs usings LastFm API using the admin account
